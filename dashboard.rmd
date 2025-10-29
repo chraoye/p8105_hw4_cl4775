@@ -1,0 +1,60 @@
+---
+title: "Instacart Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+---
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+
+# Load data
+data("instacart")
+
+# Sample data to make it manageable
+set.seed(1)
+instacart_sample = instacart %>%
+  sample_n(5000)
+```
+
+### Most Popular Aisles
+```{r}
+# Bar plot of top 20 aisles
+aisle_plot = instacart %>%
+  count(aisle) %>%
+  top_n(20, n) %>%
+  mutate(aisle = fct_reorder(aisle, n)) %>%
+  plot_ly(x = ~n, y = ~aisle, type = "bar", orientation = 'h') %>%
+  layout(xaxis = list(title = "Number of Orders"),
+         yaxis = list(title = ""))
+
+aisle_plot
+```
+
+### Orders by Hour of Day
+```{r}
+# Line plot of orders throughout the day
+hour_plot = instacart %>%
+  count(order_hour_of_day) %>%
+  plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "lines+markers") %>%
+  layout(xaxis = list(title = "Hour of Day"),
+         yaxis = list(title = "Number of Orders"))
+
+hour_plot
+```
+
+### Order Hour Distribution by Day of Week
+```{r}
+# Box plot
+day_labels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+box_plot = instacart_sample %>%
+  mutate(order_dow = factor(order_dow, labels = day_labels)) %>%
+  plot_ly(y = ~order_hour_of_day, color = ~order_dow, type = "box") %>%
+  layout(xaxis = list(title = "Day of Week"),
+         yaxis = list(title = "Order Hour"))
+
+box_plot
+```
