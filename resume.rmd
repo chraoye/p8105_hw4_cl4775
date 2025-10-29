@@ -1,0 +1,37 @@
+---
+title: "Resume"
+output: html_document
+---
+## Education
+
+**Columbia University**  
+Mailman School of Public Health, MS Biostats | Expected Graduation: May 2027
+
+**Colby College**  
+Biolody | May 2025
+
+## Experience
+
+**Research Assistant** | Colby College | May - December 2023 
+
+• Applied BLAST algorithms and predictive gene models to identify potential therapeutic targets in
+moss (Physcomitrium patens), contributing to understanding of stress response pathways.
+• Created data visualizations (heatmaps, multi-layer plots) in R to communicate complex gene
+expression patterns, enabling research team to identify key candidates for further investigation.
+
+**Research Assistant** | Colby College | May 2024 - Jan 2025
+
+• Built and optimized Cox proportional hazards models using machine learning techniques to
+enhance predictive accuracy for survival analysis in clinical research applications.
+• Performed extensive data cleaning, transformation, and visualization in R, producing
+interpretable analytical outputs for medical research projects.
+• Developed neural network approaches to improve survival prediction models, demonstrating
+proficiency in advanced statistical methodologies.
+
+## Skills
+
+* Programming: R, Excel, etc.
+* Statistical methods
+* Data visualization
+
+

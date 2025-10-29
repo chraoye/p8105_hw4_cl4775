@@ -1,0 +1,17 @@
+name: "cl4775"
+output_dir: "."
+navbar:
+  title: "cl4775"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Resume"
+      href: resume.html
+  right:
+    - icon: fa-github
+      href: https://github.com/chraoye
+    - icon: fa-envelope
+      href: cl4775@cumc.columbia.edu
+output:
+  html_document:
+    theme: cosmo

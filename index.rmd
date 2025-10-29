@@ -1,0 +1,11 @@
+---
+title: "Home"
+output: html_document
+---
+## Welcome!
+
+This is cl4775, and I created this awesome website for p8105 course! 
+
+## About This Site
+
+This site contains some information about my academic and professional work. 
